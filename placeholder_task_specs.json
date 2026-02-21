@@ -1,0 +1,26 @@
+[
+  {
+    "spec": "Rank the candidate solutions by how correctly they solve the stated problem. A correct solution directly addresses the root cause of the problem, employs sound reasoning, and would genuinely resolve the challenge if carried out fully. Solutions that miss the mark, address only a tangential concern, or rest on flawed logic should be ranked lower. Correctness is the most fundamental criterion — a solution that does not solve the problem is not a real solution regardless of how elegant, efficient, or clearly expressed it may be. When evaluating, consider whether each solution targets the actual problem described, whether its logic holds up under scrutiny, and whether the outcome it proposes would meaningfully resolve the stated challenge.",
+    "token": "4e33bd88-539d-4401-aba4-1d2135606c26"
+  },
+  {
+    "spec": "Rank the candidate solutions by how completely they address the full scope of the stated problem. Problems are often multifaceted, with several dimensions or requirements that need to be addressed. A complete solution grapples with every aspect of the problem rather than handling only the most obvious or surface-level part. When evaluating, consider whether the problem has multiple facets and assess how thoroughly each solution accounts for all of them. Solutions that address the whole problem comprehensively should be ranked above those that resolve only a fragment while leaving other dimensions unaddressed. Partial solutions that cover more ground should still be ranked above those that address less.",
+    "token": "6ec1b24f-5711-4918-a757-295d12644d26"
+  },
+  {
+    "spec": "Rank the candidate solutions by how feasible and practical they are to carry out under realistic constraints. A feasible solution is grounded and actionable — it does not depend on unreasonable assumptions, unavailable resources, or conditions that are unlikely to hold. When evaluating, consider whether each solution could realistically be implemented given typical constraints of time, resources, knowledge, and circumstances. Solutions that are practical, achievable, and grounded in reality should be ranked above those that are theoretically appealing but speculative, impractical, or dependent on implausible conditions. A perfect solution that cannot be executed has less real value than a good solution that can.",
+    "token": "cea7ade8-a4e1-46cf-b0dc-35cbc351a333"
+  },
+  {
+    "spec": "Score how clearly this solution is articulated in the context of the given problem. A clear solution is specific, well-structured, and easy to follow. It communicates a concrete, understandable course of action that could be acted upon immediately. A vague, muddled, or ambiguous solution that leaves the reader guessing about what to actually do should receive a lower score. Clarity is not about literary style or polish — it is about whether the solution conveys a definite, actionable plan. Consider whether the solution uses precise language, whether its steps or reasoning are logically ordered, and whether someone reading it would know exactly what to do next. Score higher for solutions that are immediately actionable and lower for those that are abstract or noncommittal.",
+    "token": "a2b33d97-73be-4f39-b660-67d367673d39"
+  },
+  {
+    "spec": "Rank the candidate solutions by how efficiently they address the stated problem. An efficient solution is appropriately proportioned — it accomplishes the goal without unnecessary complexity, excess steps, or wasted effort. An overly complicated approach to a simple problem indicates poor thinking, just as a trivially simple response to a deeply complex problem indicates shallow thinking. When evaluating, consider whether each solution matches the scale and nature of the problem with a well-calibrated approach. Solutions that achieve the desired outcome with the least waste, fewest unnecessary steps, and lowest overhead should be ranked above those that are bloated, roundabout, or disproportionate to the challenge at hand.",
+    "token": "0dfda7b7-52be-4fa5-b871-e76319c4dd3e"
+  },
+  {
+    "spec": "Score how robust this solution is in the context of the given problem. A robust solution holds up under variation and real-world messiness — it accounts for edge cases, anticipates potential complications, and does not collapse at the first sign of an unexpected condition. When evaluating, consider whether the solution demonstrates awareness of what could go wrong and builds in resilience. Does it handle boundary conditions? Does it account for variability in circumstances? A solution that works only under ideal, narrow conditions should receive a lower score than one that remains effective across a range of realistic scenarios. Score higher for solutions that are adaptable, resilient, and thoughtfully defensive, and lower for those that are brittle or naive about real-world complexity.",
+    "token": "0968b39e-dcd4-41b7-90b1-c404f891ca8b"
+  }
+]

@@ -1,0 +1,15 @@
+1. Understand the problem statement by identifying its core challenge, scope, constraints, and what a successful resolution would look like, so that every solution can be evaluated against a clear and consistent understanding of what needs to be solved.
+
+2. Evaluate correctness by determining whether each solution actually solves the stated problem. Assess whether the solution addresses the root cause, whether its reasoning is sound, and whether carrying it out would genuinely resolve the challenge. Solutions that miss the mark, target only a tangential concern, or rest on flawed logic should be ranked below those that directly and accurately address the problem.
+
+3. Evaluate completeness by determining whether each solution addresses the full scope of the problem or only a portion of it. Consider whether the problem has multiple facets or dimensions and assess how thoroughly each solution accounts for all of them. Solutions that grapple with the whole problem should be ranked above those that handle only the most obvious aspect while leaving other dimensions unaddressed.
+
+4. Evaluate feasibility by determining whether each solution is practical and achievable under realistic constraints. Consider whether the solution requires resources, knowledge, or conditions that are reasonable to expect, or whether it depends on assumptions that are unlikely to hold. Grounded and actionable solutions should be preferred over those that are speculative or impractical.
+
+5. Evaluate clarity by determining whether each solution is specific, well-structured, and easy to follow. Assess whether the solution communicates a concrete, understandable course of action that could be acted upon, or whether it is vague, muddled, or leaves the reader guessing about what to actually do.
+
+6. Evaluate efficiency by determining whether each solution is appropriately proportioned to the problem. Consider whether the solution accomplishes the goal without unnecessary complexity, excess steps, or wasted effort. An overly complicated approach to a simple problem, or a trivially simple response to a deeply complex one, should be ranked lower than a solution whose scale matches the challenge.
+
+7. Evaluate robustness by determining whether each solution holds up under variation and real-world messiness. Consider whether the solution accounts for edge cases, anticipates complications, and demonstrates resilience to unexpected conditions, or whether it is brittle and works only under ideal circumstances.
+
+8. Synthesize all quality evaluations into a final ranking by weighing correctness, completeness, feasibility, clarity, efficiency, and robustness together. Recognize that these qualities are interrelated — correctness is foundational, feasibility gates practical value, and clarity supports the assessment of every other quality — and produce an overall ordering from best to worst that reflects the combined strength of each solution across all dimensions.

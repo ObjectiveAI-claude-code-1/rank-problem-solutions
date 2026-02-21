@@ -1,0 +1,302 @@
+{
+  "type": "vector.function",
+  "output_length": {
+    "$jmespath": "length(input.solutions)"
+  },
+  "input_split": {
+    "$starlark": "[{\"problem\": input[\"problem\"], \"solutions\": [s]} for s in input[\"solutions\"]]"
+  },
+  "input_merge": {
+    "$starlark": "{\"problem\": input[0][\"problem\"], \"solutions\": [item[\"solutions\"][0] for item in input]}"
+  },
+  "input_schema": {
+    "type": "object",
+    "description": "A problem and candidate solutions to rank.",
+    "properties": {
+      "problem": {
+        "type": "string",
+        "description": "The problem statement to solve."
+      },
+      "solutions": {
+        "type": "array",
+        "description": "The candidate solutions to rank from best to worst.",
+        "minItems": 2,
+        "items": {
+          "type": "string",
+          "description": "A candidate solution to the problem."
+        }
+      }
+    },
+    "required": [
+      "problem",
+      "solutions"
+    ]
+  },
+  "tasks": [
+    {
+      "type": "placeholder.vector.function",
+      "input_schema": {
+        "type": "object",
+        "description": "A problem and candidate solutions to rank by correctness.",
+        "properties": {
+          "problem": {
+            "type": "string",
+            "description": "The problem statement to solve."
+          },
+          "solutions": {
+            "type": "array",
+            "description": "The candidate solutions to rank by how correctly they address the problem.",
+            "minItems": 2,
+            "items": {
+              "type": "string",
+              "description": "A candidate solution to the problem."
+            }
+          }
+        },
+        "required": [
+          "problem",
+          "solutions"
+        ]
+      },
+      "output_length": {
+        "$jmespath": "length(input.solutions)"
+      },
+      "input_split": {
+        "$starlark": "[{\"problem\": input[\"problem\"], \"solutions\": [s]} for s in input[\"solutions\"]]"
+      },
+      "input_merge": {
+        "$starlark": "{\"problem\": input[0][\"problem\"], \"solutions\": [item[\"solutions\"][0] for item in input]}"
+      },
+      "skip": null,
+      "input": {
+        "problem": {
+          "$jmespath": "input.problem"
+        },
+        "solutions": {
+          "$jmespath": "input.solutions"
+        }
+      },
+      "output": {
+        "$jmespath": "output"
+      }
+    },
+    {
+      "type": "placeholder.vector.function",
+      "input_schema": {
+        "type": "object",
+        "description": "A problem and candidate solutions to rank by completeness.",
+        "properties": {
+          "problem": {
+            "type": "string",
+            "description": "The problem statement to solve."
+          },
+          "solutions": {
+            "type": "array",
+            "description": "The candidate solutions to rank by how completely they address the problem.",
+            "minItems": 2,
+            "items": {
+              "type": "string",
+              "description": "A candidate solution to the problem."
+            }
+          }
+        },
+        "required": [
+          "problem",
+          "solutions"
+        ]
+      },
+      "output_length": {
+        "$jmespath": "length(input.solutions)"
+      },
+      "input_split": {
+        "$starlark": "[{\"problem\": input[\"problem\"], \"solutions\": [s]} for s in input[\"solutions\"]]"
+      },
+      "input_merge": {
+        "$starlark": "{\"problem\": input[0][\"problem\"], \"solutions\": [item[\"solutions\"][0] for item in input]}"
+      },
+      "skip": null,
+      "input": {
+        "problem": {
+          "$jmespath": "input.problem"
+        },
+        "solutions": {
+          "$jmespath": "input.solutions"
+        }
+      },
+      "output": {
+        "$jmespath": "output"
+      }
+    },
+    {
+      "type": "placeholder.vector.function",
+      "input_schema": {
+        "type": "object",
+        "description": "A problem and candidate solutions to rank by feasibility.",
+        "properties": {
+          "problem": {
+            "type": "string",
+            "description": "The problem statement to solve."
+          },
+          "solutions": {
+            "type": "array",
+            "description": "The candidate solutions to rank by how feasible and practical they are.",
+            "minItems": 2,
+            "items": {
+              "type": "string",
+              "description": "A candidate solution to the problem."
+            }
+          }
+        },
+        "required": [
+          "problem",
+          "solutions"
+        ]
+      },
+      "output_length": {
+        "$jmespath": "length(input.solutions)"
+      },
+      "input_split": {
+        "$starlark": "[{\"problem\": input[\"problem\"], \"solutions\": [s]} for s in input[\"solutions\"]]"
+      },
+      "input_merge": {
+        "$starlark": "{\"problem\": input[0][\"problem\"], \"solutions\": [item[\"solutions\"][0] for item in input]}"
+      },
+      "skip": null,
+      "input": {
+        "problem": {
+          "$jmespath": "input.problem"
+        },
+        "solutions": {
+          "$jmespath": "input.solutions"
+        }
+      },
+      "output": {
+        "$jmespath": "output"
+      }
+    },
+    {
+      "type": "placeholder.scalar.function",
+      "input_schema": {
+        "type": "object",
+        "description": "A problem and a single solution to evaluate for clarity.",
+        "properties": {
+          "problem": {
+            "type": "string",
+            "description": "The problem statement providing context for evaluation."
+          },
+          "solution": {
+            "type": "string",
+            "description": "The candidate solution to evaluate for clarity."
+          }
+        },
+        "required": [
+          "problem",
+          "solution"
+        ]
+      },
+      "skip": null,
+      "map": 0,
+      "input": {
+        "problem": {
+          "$jmespath": "input.problem"
+        },
+        "solution": {
+          "$jmespath": "map"
+        }
+      },
+      "output": {
+        "$starlark": "[x / sum(output) for x in output] if sum(output) > 0 else [1.0 / len(output) for x in output]"
+      }
+    },
+    {
+      "type": "placeholder.vector.function",
+      "input_schema": {
+        "type": "object",
+        "description": "A problem and candidate solutions to rank by efficiency.",
+        "properties": {
+          "problem": {
+            "type": "string",
+            "description": "The problem statement to solve."
+          },
+          "solutions": {
+            "type": "array",
+            "description": "The candidate solutions to rank by how efficiently they address the problem.",
+            "minItems": 2,
+            "items": {
+              "type": "string",
+              "description": "A candidate solution to the problem."
+            }
+          }
+        },
+        "required": [
+          "problem",
+          "solutions"
+        ]
+      },
+      "output_length": {
+        "$jmespath": "length(input.solutions)"
+      },
+      "input_split": {
+        "$starlark": "[{\"problem\": input[\"problem\"], \"solutions\": [s]} for s in input[\"solutions\"]]"
+      },
+      "input_merge": {
+        "$starlark": "{\"problem\": input[0][\"problem\"], \"solutions\": [item[\"solutions\"][0] for item in input]}"
+      },
+      "skip": null,
+      "input": {
+        "problem": {
+          "$jmespath": "input.problem"
+        },
+        "solutions": {
+          "$jmespath": "input.solutions"
+        }
+      },
+      "output": {
+        "$jmespath": "output"
+      }
+    },
+    {
+      "type": "placeholder.scalar.function",
+      "input_schema": {
+        "type": "object",
+        "description": "A problem and a single solution to evaluate for robustness.",
+        "properties": {
+          "problem": {
+            "type": "string",
+            "description": "The problem statement providing context for evaluation."
+          },
+          "solution": {
+            "type": "string",
+            "description": "The candidate solution to evaluate for robustness."
+          }
+        },
+        "required": [
+          "problem",
+          "solution"
+        ]
+      },
+      "skip": null,
+      "map": 1,
+      "input": {
+        "problem": {
+          "$jmespath": "input.problem"
+        },
+        "solution": {
+          "$jmespath": "map"
+        }
+      },
+      "output": {
+        "$starlark": "[x / sum(output) for x in output] if sum(output) > 0 else [1.0 / len(output) for x in output]"
+      }
+    }
+  ],
+  "input_maps": [
+    {
+      "$jmespath": "input.solutions"
+    },
+    {
+      "$jmespath": "input.solutions"
+    }
+  ],
+  "description": "Ranks candidate solutions to a problem from best to worst by evaluating six qualities: correctness, completeness, feasibility, clarity, efficiency, and robustness. Comparative and per-solution evaluations are combined into a unified ranking reflecting each solution's overall strength."
+}
